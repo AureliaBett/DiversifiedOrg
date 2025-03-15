@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PROGRAMS</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Optional: Add font link -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconify/iconify@2.1.0/dist/iconify.min.js">
+</head>
+
+<body>
+ 
+
+  <header>
+    <!-- Top bar with language toggle -->
+    <div class="top-bar">
+      <!--<div class="language">
+        <a href="#">Swahili</a> | <a href="#">English</a>
+      </div>-->
+      <div class="social-icons">
+        <a href="#">🔍</a>
+        <a href="https://www.instagram.com/diversified_ke/profilecard/?igsh=MXYyZHY0OXJ0ajg4cA=="  class="hideOnMobile" class="social-icon" target="_blank">
+          <i class="fab fa-instagram" ></i>
+        </a>
+        
+        <!-- TikTok Icon -->
+        <a href="https://www.tiktok.com/@diversified_ke?_t=8sFI5LR6P25&_r=1"  class="hideOnMobile" class="social-icon" target="_blank">
+          <i class="fab fa-tiktok"></i>
+        </a>
+        
+        <!-- X (Twitter) Icon -->
+        <a href="https://x.com/diversified_ke?t=T3dMThBhz4RlYC1koGQbjw&s=08"   class="hideOnMobile" class="social-icon" target="_blank">
+          <i class="fab fa-x"></i> <!-- Use 'fa-x' for the X platform icon -->
+        </a> 
+        
+      </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+     <!-- <div class="logo"> 
+        <img src="favicon.jpg" class="thumbnail" alt="Logo">
+      </div> -->
+
+      <img src="favicon.jpg" class="thumbnail" alt="Logo">
+       <ul class="sidebar" id="nav-links">
+        <li  onclick = hideSidebar() ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li onclick = programs()><a href="programs.html">Our Programs</a></li>
+        <li><a href="media.html">News & Media</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+      <ul class="nav-links" id="nav-links">
+        <li class = "hideOnMobile" ><a href="index.html">Home</a></li>
+        <li class = "hideOnMobile" ><a href="about.html">About Us</a></li>
+        <li class = "hideOnMobile" ><a href="programs.html">Our Programs</a></li>
+        <li class = "hideOnMobile" ><a href="media.html">News & Media</a></li>
+        <li class = "hideOnMobile" ><a href="contact.html">Contact Us</a></li>
+         <a href="#" class="donate-button" role="button">Donate</a>
+        
+        <li onclick = showSidebar() ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="100px" viewBox="0 0 960 960" width="40px"  fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+      
+      </ul>
+        
+      
+      <!--<div class="cta-buttons">
+        <a href="#" class="donate-button" role="button">Donate</a>
+        <a href="#" class="btn volunteer">Volunteer</a>
+        <li onclick = showSidebar() ><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="80px" viewBox="0 0 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+       
+      </div> -->
+    </nav>
+  </header>
+  <section class="waysWeHelp" aria-labelledby="waysWeHelp-title">
+    <h2 class="wwh">Our Programs</h2>
+    <p class="waysWeHelp-description">
+      Furthering our cause is the most important goal of our organization. We seek to support, empower, 
+      and provide high-quality resources to the community. Learn more about what we do below.
+    </p>
+    <div class="waysWeHelp-cards">
+      <div class="card">
+        <img src="empowerment.webp" alt="Art supplies and a plaid cloth" class="card-image1">
+        <h3 class="card-title"> Economic Empowerment</h3>
+        <p class="card-description"> Equip 200 queer youth annually with woodworking
+          skills,financial literacy, entrepreneurship, and career development skills for economic
+          independence.</p>
+      </div>
+      <div class="card">
+        <img src="arttherapy.webp" alt="People in a discussion on a picnic blanket" class="card-image2">
+        <h3 class="card-title"> Mental Wellness Through Art:</h3>
+        <p class="card-description">Provide art therapy and creative workshops to 200
+          participants yearly, supporting trauma healing and personal growth.</p>
+      </div>
+      <div class="card">
+        <img src="drug.jpg" alt="Three individuals posing outdoors" class="card-image3">
+        <h3 class="card-title">Substance Abuse Reduction</h3>
+        <p class="card-description">Lower substance abuse rates by 30% in 3 years through
+          peer-led sobriety support and drug-free hangouts.</p>
+      </div>
+    </div>
+    <h2 id="waysWeHelp-title"></h2>
+    <p class="waysWeHelp-description">
+      
+    </p>
+    <div class="waysWeHelp-cards">
+      <div class="card">
+        <img src="joy.webp" alt="Art supplies and a plaid cloth" class="card-image1">
+        <h3 class="card-title"> Queer Joy & Community Resilience:</h3>
+        <p class="card-description">:Woodwork workshop, financial literacy, career development, and
+          entrepreneurship support, with peer-led skill swaps for crafts like soap-making, wig-making,
+          and online business management</p>
+      </div>
+
+      <div class="card">
+        <img src="balconies.jpg" alt="People in a discussion on a picnic blanket" class="card-image2">
+        <h3 class="card-title">Balconies of Hope</h3>
+        <p class="card-description">Provides seedlings for small urban gardens, usually balconies, promoting
+          food security, healthy eating, and mindfulness.
+          </p>
+      </div>
+
+      <div class="card">
+        <img src="sobriety.jpg" alt="Three individuals posing outdoors" class="card-image3">
+        <h3 class="card-title">Sobriety Clinic</h3>
+        <p class="card-description">A communal initiative offering support for substance abuse recovery,
+          supplemented by professional mental health services in collaboration with Mental 360.
+          y</p>
+      </div>
+
+      <div class="card">
+        <img src="podcast.webp" alt="Three individuals posing outdoors" class="card-image3">
+        <h3 class="card-title">Podcasts</h3>
+        <p class="card-description">Sharing lived experiences of queer individuals in Kenya.</p>
+      </div>
+
+      <div class="card">
+        <img src="entreprenueership.jpg" alt="Three individuals posing outdoors" class="card-image3">
+        <h3 class="card-title">Entrepreneurship & Career Development</h3>
+        <p class="card-description">Featuring segments with entrepreneurs for
+          guidance and inspiration.</p>
+      </div>
+
+      <div class="card">
+        <img src="sex.webp" alt="Three individuals posing outdoors" class="card-image3">
+        <h3 class="card-title">Queer Sex Workers</h3>
+        <p class="card-description"> Supporting and advocating for queer sex workers</p>
+      </div>
+
+      <div class="card">
+        <img src="speeddating.webp" alt="Three individuals posing outdoors" class="card-image3">
+        <h3 class="card-title">Speed Dating & Matchmaking</h3>
+        <p class="card-description">Facilitating events for queer individuals to connect.</p>
+      </div>
+
+      <div class="card">
+        <img src="sexwork.webp" alt="Three individuals posing outdoors" class="card-image3">
+        <h3 class="card-title">Sexual Pleasure & Body Positivity</h3>
+        <p class="card-description"> Promoting discussions on BDSM, self-pleasure, and
+          consent.</p>
+      </div>
+
+    </div>
+
+    <p class="waysWeHelp-description">
+      
+
+
+    </p>
+
+    <p class="waysWeHelp-description">
+      Find out more on our social media
+      <!-- Instagram Icon -->
+      <a href="https://www.instagram.com/diversified_ke/profilecard/?igsh=MXYyZHY0OXJ0ajg4cA==" class="social-icon" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      
+      <!-- TikTok Icon -->
+      <a href="https://www.tiktok.com/@diversified_ke?_t=8sFI5LR6P25&_r=1" class="social-icon" target="_blank">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      
+      <!-- X (Twitter) Icon -->
+      <a href="https://x.com/diversified_ke?t=T3dMThBhz4RlYC1koGQbjw&s=08" class="social-icon" target="_blank">
+        <i class="fab fa-x"></i> <!-- Use 'fa-x' for the X platform icon -->
+      </a>
+   
+    </p>
+
+  </section>
+  
+
+  <section id="contactUs" class="contactUs-section">
+    <table class="table-content"> 
+      <tr > 
+    <th class="heading">Contact Us</th>
+    <th class = "hideOnMobile" class="heading">Location</th>
+    <th class = "hideOnMobile" class="heading">Our Socials</th>
+  
+  </tr>
+  <tr>  
+    <td> 
+      <p>Founder +254701820823 </p> <br>
+      <p>Operations +25471269705 </p> <br>
+      
+  </td>
+  <td> <p>P.O BOX 12345-00100 Nairobi-Kenya </p> 
+    <br>
+    <p> Location: Nextgen Mall, 5th Floor, Mombasa Road </p>
+  </td>
+  <td > 
+   
+    
+      <!-- Instagram Icon -->
+      <a href="https://www.instagram.com/diversified_ke/profilecard/?igsh=MXYyZHY0OXJ0ajg4cA==" class="social-icon" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      
+      <!-- TikTok Icon -->
+      <a href="https://www.tiktok.com/@diversified_ke?_t=8sFI5LR6P25&_r=1" class="social-icon" target="_blank">
+        <i class="fab fa-tiktok"></i>
+      </a>
+      
+      <!-- X (Twitter) Icon -->
+      <a href="https://x.com/diversified_ke?t=T3dMThBhz4RlYC1koGQbjw&s=08" class="social-icon" target="_blank">
+        <i class="fab fa-x"></i> <!-- Use 'fa-x' for the X platform icon -->
+      </a>
+   
+
+</td>
+  </tr>
+
+    </table>
+  </section>
+
+  <footer>
+    <p>&copy; Diversified. All rights reserved.</p>
+  </footer>
+ 
+
+  
+  <script src="script.js"></script>
+</body>
+</html>

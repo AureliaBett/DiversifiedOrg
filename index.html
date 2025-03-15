@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diversified KE</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Optional: Add font link -->
+  
+  <!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">-->
+  
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <!-- Optional: For PNG favicon -->
+  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@iconify/iconify@2.1.0/dist/iconify.min.js"></script>
+</head>
+
+<body>  
+
+  <nav class="navbar">
+   
+      <img src="favicon.jpg" class="thumbnail1" alt="Logo">
+      <ul class="sidebar" id="nav-links">
+        <li  onclick = hideSidebar() ><a href="#" class="bar"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Our Programs</a></li>
+        <li><a href="media.html">News & Media</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="contact.html">Blog</a></li>
+      </ul>
+      <ul class="nav-links" id="nav-links">
+        <li class = "hideOnMobile" ><a href="index.html">Home</a></li>
+        <li class = "hideOnMobile" ><a href="about.html">About Us</a></li>
+        <li class = "hideOnMobile" ><a href="programs.html">Our Programs</a></li>
+        <li class = "hideOnMobile" ><a href="media.html">News & Media</a></li>
+        <li class = "hideOnMobile" ><a href="contact.html"> Blog</a></li>
+        <li class = "hideOnMobile" ><a href="contact.html">Contact Us</a></li>
+        <li class = "hideOnMobile donate" ><a href="payment.html">Donate</a></li>
+          
+         
+        <li onclick = showSidebar() class="hideOnDesktop"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="100px" viewBox="0 0 960 960" width="40px"  fill="#000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+       
+      </ul>
+         
+       
+  </nav>
+  
+  <section id="home" class="hero">
+    
+      <div class="herosec"> 
+     
+      <h2>Welcome to Diversified Kenya</h2>
+        <p> We are an LBQ organization dedicated to <br> empowering, educating,
+          and sensitizing the community.</p> 
+          <br>
+          <br>
+          <p> Learn more about us below</p>
+          
+    </div>
+    <a href="#" class="about-button" role="button">About Us</a>
+
+ </section>
+
+ <section class="program">
+  <div class="cards">
+    <img src="drug.jpg" alt="Sobriety Clinic" class="card1">
+    <h3 > Sobriety Clinic</h3>
+    <p >A communal initiative offering support for substance abuse recovery,
+      supplemented by professional mental health services in collaboration with Mental 360.</p>
+  </div>
+  <div class="cards">
+    <img src="arttherapy.webp" alt="Art As healing" class="card2">
+    <h3 class="card-title"> Mental wellness Through Art</h3>
+    <p class="card-description">We provide therapy and creative workshops to 200
+      participants yearly, supporting trauma healing and personal growth. These workshops  use art for
+    emotional healing and self expression  </p>
+  </div>
+  <div class="cards">
+    <img src="economic.jpg" alt="Empowerment" class="card3">
+    <h3 class="card-title"> Economic Empowerment</h3>
+    <p class="card-description"> Woodwork workshop, financial literacy, career development, and
+      entrepreneurship support, with peer-led skill swaps for crafts like soap-making, wig-making,
+      and online business management.</p>
+  </div>
+
+ </section>
+
+ <section class="aboutUs">
+  <div class="aboutUs-content">
+    <div class="border-bottom"></div>
+       <h2> About Us</h2>
+      <p >Everyone deserves a circle of inclusion and influence, but it is up to you to create it.</p>
+      <p > Welcome to Diversified Kenya, an LBQ organization dedicated to empowering, educating,
+       and sensitizing the community. Our misssion is to provide resources and to support those who need
+      it most.</p> 
+      <p > We create a safe and inclusive enviroment where everyone is welcome. 
+      We believe in creating awareness about the unique challanges that the LBQ community faces,
+      and we are commited to bridging the gap between community and society as a whole.</p>
+      <p >Click more to learn more about us and how we empower you.</p>
+      <p> <a href="#" class="about-button1" role="button">More</a>  </p>
+
+    </div>
+ </section>
+
+ <div class="logos">
+  <div class="logo-slides">
+    <img src="nglhrc.jpeg" alt="nglhrc" class="logs" onclick="redirectTo('https://nglhrc.com/')">
+    <img src="leha.jpeg" alt="leha" class="logs">
+    <img src="inend.jpeg" alt="inend" class="logs"  onclick="redirectTo('https://inend.org/')" >
+    <img src="favicon.jpg" alt="Diversified" class="logs">
+    <img src="galck+.jpeg" alt="galck+" class="logs" onclick="redirectTo('https://galck.org/')">
+  </div>
+ </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
