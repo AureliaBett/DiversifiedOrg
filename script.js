@@ -91,12 +91,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Sponsor Section - Clone Logo Slides for Infinite Scroll Effect
-  const logoSlides = document.querySelector(".logo-slides");
+   const logoSlides = document.querySelector(".logo-slides");
   if (logoSlides) {
     const clone = logoSlides.cloneNode(true);
     clone.classList.add("clone");
     document.querySelector(".logos").appendChild(clone);
   }
+});
 function redirectTo(url) {
   window.open(url, "_blank");
 }
