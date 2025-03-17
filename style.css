@@ -499,9 +499,21 @@ text-align: center;
 #foot {
   height: 50vh;
   background-color: #a5b3fd;
+
 }
 
-
+.copyright{
+  align-items: center;
+  background-color: #080808;
+  justify-content: center;
+}
+.copyright p{
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+}
 
 
 

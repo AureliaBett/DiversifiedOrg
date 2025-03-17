@@ -82,11 +82,23 @@ document.addEventListener('DOMContentLoaded', () => {
     window.location.href = "about.html";
   });
 
-  // Navbar Scroll Effect
+  // Navbar Scroll Effect with Thumbnail Resize
   window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
+    const thumbnail = document.querySelector(".thumbnail1");
+
     if (navbar) {
       navbar.classList.toggle("scrolled", window.scrollY > 50);
+    }
+
+    if (thumbnail) {
+      if (window.scrollY > 50) {
+        thumbnail.style.width = "40px"; // Smaller size
+        thumbnail.style.height = "40px";
+      } else {
+        thumbnail.style.width = "80px"; // Original size
+        thumbnail.style.height = "80px";
+      }
     }
   });
 
@@ -151,9 +163,20 @@ dropdowns.forEach(dropdown => {
       .then(response => response.text())
       .then(data => {
         footerPlaceholder.innerHTML = data;
-        // Reinitialize any event listeners or scripts related to the footer
+        
       })
-      .catch(error => console.error('Error loading navbar:', error));
+      .catch(error => console.error('Error loading footer:', error));
+  }
+
+  const copyPlaceholder = document.getElementById('copy-placeholder');
+  if (copyPlaceholder) {
+    fetch('copyright.html')
+      .then(response => response.text())
+      .then(data => {
+        copyPlaceholder.innerHTML = data;
+        
+      })
+      .catch(error => console.error('Error loading copyright:', error));
   }
 });
 
