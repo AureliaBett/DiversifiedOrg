@@ -132,8 +132,29 @@ dropdowns.forEach(dropdown => {
   });
 });
 
+  // Dynamically load the navigation bar
+  const navbarPlaceholder = document.getElementById('navbar-placeholder');
+  if (navbarPlaceholder) {
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        navbarPlaceholder.innerHTML = data;
+        // Reinitialize any event listeners or scripts related to the navbar
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  }
 
-
+  // Dynamically load the footer
+  const footerPlaceholder = document.getElementById('footer-placeholder');
+  if (footerPlaceholder) {
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => {
+        footerPlaceholder.innerHTML = data;
+        // Reinitialize any event listeners or scripts related to the footer
+      })
+      .catch(error => console.error('Error loading navbar:', error));
+  }
 });
 
 
