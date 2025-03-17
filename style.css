@@ -8,7 +8,18 @@ min-height: 100vh;
 background-color: #2b2a2a; 
 font-family: Arial, sans-serif;
 }
-
+.p{
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+}
+h2{
+  font-size: 2.0rem;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #000;
+}
 .navbar {
   position: fixed;
   background: transparent;
@@ -23,7 +34,7 @@ font-family: Arial, sans-serif;
   }
   
 .navbar.scrolled {
-  background: rgba(117, 117, 117, 0.6); 
+  background: rgba(227, 227, 227, 0.6); 
   box-shadow: 0px, 0px, 0px, 0px, rgba(0, 0, 0, 0.1) ;
 }
 .thumbnail1{
@@ -55,7 +66,10 @@ font-family: Arial, sans-serif;
       color: #f0f0f0;
       cursor: pointer;
       }
-      
+      .nav-links li a.active{
+        color: #f0f0f0;
+        
+        }
       .sidebar {
       position: fixed;
       top: 0;
@@ -153,6 +167,7 @@ font-family: Arial, sans-serif;
     font-family: 'Times New Roman', Times, serif;
     font-size: 2.0rem;
     font-weight: bold;
+    color: #000;
     }
 
 .aboutUs {
@@ -174,10 +189,11 @@ font-family: Arial, sans-serif;
   margin: 70px 0;
   border-radius: 20px;
   padding:20px 20px 50px 20px;
-  background: rgba(250, 239, 239, 0.4); 
+  background: rgba(250, 239, 239, 0.7); 
   overflow: hidden;
 }
 .aboutUs-content h2, p{
+  color: #000;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .aboutUs-content h2 {
@@ -189,6 +205,7 @@ font-family: Arial, sans-serif;
   font-weight: 600;
   margin-bottom: 16px; 
   line-height: 1.6;
+  color: #000;
  }
 .aboutUs-content::before {
   content: "";
@@ -285,10 +302,9 @@ font-family: Arial, sans-serif;
   display: flex;
   flex-wrap: wrap;
   border-bottom: solid #000;
-  justify-content: center;
-  gap: 4rem;
-  background: url('sec1.jpg?v=1') no-repeat center center/cover;
-  background-attachment: fixed;
+  justify-content: space-evenly;
+ 
+  background: rgb(51, 51,51);
 } 
 .cards{
 margin: -30px 0 50px 0;
@@ -296,31 +312,31 @@ background-color: #dbd9d9;
 border-radius: 15px;
 box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 overflow: hidden;
-width: 100%;
-max-width: 300px;
+
+width:300px;
 text-align: center;
 }
 .cards:hover{
   background-color: #928e8e;
 }
-.card1{
-  margin: auto;
-  width: 70%;
-  height: auto;
-  display: block;
+.cards p{
+  color: #000;
+  text-align: left; 
+  padding: 0 10px;
 }
-.card2{
-  width: 100%;
-  height: auto;
-  display: block;
+.cards img{
+  width: 300px;
+  height: 300px;
 }
-.card3{
-  width: 100%;
-  height: auto;
-  display: block;
-  padding: 0 0 10px 0;
+.cards h3{
+  text-decoration: underline;
+  color: #000;
 }
 
+.card-title{
+  padding-top: 2px;
+  margin-top: 15px;
+}
 .logos{
   overflow: hidden;
   padding:60px 0 ;
@@ -362,10 +378,7 @@ text-align: center;
   height:200px;
   margin: 0 50px;
 }
-.logos:hover .logo-slides{
-  animation-play-state: paused;
-  transform: scale(1.25);
-}
+
 .logs:hover{
   transform: scale(1.25);
   cursor: pointer;
@@ -380,13 +393,66 @@ text-align: center;
   }
 }
 
+.podcast{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background: rgb(40, 19 ,42)
+  
+}
 
+.podcast-content{
+  text-align: center;
+  width: 50%;
+  margin: 70px 0;
+  margin-top: 10px ;
+  margin-left: 30px;
+}
+.podcast-content h2, p {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
 
+#pod-button{
+  margin-top: 40px;
+}
+.podcast h2{
+  text-decoration: underline;
+  font-size: 1.5rem;
+}
+.podcast p{
+  font-size: 1.2rem;
+}
+.pod-button{
+  
+  width:fit-content;
+  padding: 10px 20px;
+  height: fit-content;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  border:solid rgb(199, 198, 198);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.pod-button:hover{
+  background-color: rgb(145, 143, 143); 
+  color: blue;
+}
 
-
-
-
-
+.podcast-image{
+  border-radius: 15px;
+  height: 400px
+}
+.podcast-image:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+}
 
 
 
