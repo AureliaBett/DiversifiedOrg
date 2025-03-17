@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     card.style.transition = 'transform 0.3s, box-shadow 0.3s';
 
     card.addEventListener('mouseenter', () => {
-      card.style.transform = 'scale(1.25)';
+      card.style.transform = 'scale(1.15)';
       card.style.boxShadow = '0 8px 16px rgba(0, 0, 0, 0.2)';
     });
 
@@ -45,6 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
       card.style.transform = 'scale(1)';
       card.style.boxShadow = 'none';
     });
+  });
+
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  // Get the current page URL
+  const currentPage = window.location.pathname;
+
+  // Loop through each link and add the 'active' class to the matching link
+  navLinks.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    } else {
+      link.classList.remove('active');
+    }
   });
 
   // Sidebar Menu
