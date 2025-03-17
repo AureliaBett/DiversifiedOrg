@@ -9,7 +9,7 @@
   
   <!--<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">-->
   
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" >
   <!-- Optional: For PNG favicon -->
   <link rel="icon" href="favicon.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -20,7 +20,7 @@
 
   <nav class="navbar">
    
-      <img src="favicon.jpg" class="thumbnail1" alt="Logo">
+      <img src="favicon.jpg"  class="thumbnail1" alt="Logo" onclick="redirectTo('https://diversified-org.vercel.app/')">
       <ul class="sidebar" id="nav-links">
         <li  onclick = hideSidebar() ><a href="#" class="bar"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
         <li><a href="index.html">Home</a></li>
@@ -32,7 +32,15 @@
       </ul>
       <ul class="nav-links" id="nav-links">
         <li class = "hideOnMobile" ><a href="index.html"  class="active">Home</a></li>
-        <li class = "hideOnMobile" ><a href="about.html" >About Us</a></li>
+        <li class="hideOnMobile dropdown">
+          <a href="about.html">About Us</a>
+          <ul class="dropdown-menu">
+            <li><a href="team.html">Our History</a></li>
+            <li><a href="mission.html">Our Mission</a></li>
+            <li><a href="mission.html">Meet the Team</a></li>
+            
+          </ul>
+        </li>
         <li class = "hideOnMobile" ><a href="programs.html" >Our Programs</a></li>
         <li class = "hideOnMobile" ><a href="media.html" >News & Media</a></li>
         <li class = "hideOnMobile" ><a href="contact.html" > Blog</a></li>
@@ -87,7 +95,7 @@
 
  </section>
 
- <section class="aboutUs">
+ <section class="aboutUs" id="aboutUs">
   <div class="aboutUs-content">
     <div class="border-bottom"></div>
        <h2> About Us</h2>

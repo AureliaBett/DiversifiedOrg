@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     clone.classList.add("clone");
     document.querySelector(".logos").appendChild(clone);
   }
-});
+
 function redirectTo(url) {
   window.open(url, "_blank");
 }
@@ -110,6 +110,30 @@ function updateFavicon() {
 }
 updateFavicon();
 
+function scrollToAboutUs(event) {
+  event.preventDefault(); // Prevent default link behavior
+  const aboutSection = document.getElementById("aboutUs");
+  if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+  }
+}
 
+// Handle dropdown menu hover functionality
+const dropdowns = document.querySelectorAll('.dropdown');
+dropdowns.forEach(dropdown => {
+  dropdown.addEventListener('mouseenter', () => {
+    const menu = dropdown.querySelector('.dropdown-menu');
+    if (menu) menu.style.display = 'block';
+  });
+
+  dropdown.addEventListener('mouseleave', () => {
+    const menu = dropdown.querySelector('.dropdown-menu');
+    if (menu) menu.style.display = 'none';
+  });
+});
+
+
+
+});
 
 
