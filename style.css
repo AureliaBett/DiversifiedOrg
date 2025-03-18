@@ -500,9 +500,48 @@ text-align: center;
   cursor: pointer;
   transform: scale(1.05);
 }
-
-
-
+.cool{
+background-color: #fff;  
+ justify-content: center;
+ align-items: center;
+ gap:4rem;
+}
+.cool img{
+  height: 500px;
+ 
+}
+.divider{
+  border-bottom: solid 1px wheat;
+  margin: 5px 0;
+}
+.joy{
+  position: relative;
+  background: url('queer.webp?v=1') no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 110vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+.joy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8); 
+  z-index: 1;
+}
+.joy-content{
+  position:relative;
+  z-index:2;
+  color: white;
+  padding: 20px;
+  width: 50%;
+  font-size: 1.5rem;
+}
 
 
 
@@ -512,7 +551,30 @@ text-align: center;
   background-color: #a5b3fd;
 
 }
-
+.foot{
+ justify-content: center; 
+ align-items: center;
+}
+.table-content {
+ margin: auto;
+  width: 50%;
+  font-size: 1.2rem;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+ .table-content td {
+  padding: 50px; 
+}
+.table-content p{
+  color: #000;
+}
+.social-icon{
+  font-size: 2rem; 
+  color: #000; 
+  margin: 0 5px; 
+  transition: color 0.3s ease; 
+  display: inline-block;
+}
 .copyright{
   align-items: center;
   background-color: #080808;

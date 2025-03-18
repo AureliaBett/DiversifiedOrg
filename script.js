@@ -180,6 +180,8 @@ dropdowns.forEach(dropdown => {
       })
       .catch(error => console.error('Error loading copyright:', error));
   }
+
+  
 });
 
 
