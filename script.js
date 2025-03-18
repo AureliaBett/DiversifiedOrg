@@ -1,3 +1,7 @@
+function redirectTo(url) {
+  window.open(url, "_blank");
+ }
+ 
 document.addEventListener('DOMContentLoaded', () => {
 
   // Hero Section Background Change
@@ -47,17 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  const navLinks = document.querySelectorAll('.nav-links a');
+  const navLinks = document.querySelectorAll('.nav-links a, .sidebar a');
 
   // Get the current page URL
   const currentPage = window.location.pathname;
 
-  // Loop through each link and add the 'active' class to the matching link
+  // Loop through each link and update the active class
   navLinks.forEach(link => {
     if (link.getAttribute('href') === currentPage) {
-      link.classList.add('active');
+      link.classList.add('active'); // Add active class to the current page link
     } else {
-      link.classList.remove('active');
+      link.classList.remove('active'); // Remove active class from other links
     }
   });
 
@@ -110,9 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector(".logos").appendChild(clone);
   }
 
-function redirectTo(url) {
-  window.open(url, "_blank");
-}
+
 // Function to Set Favicon (Automatically Chooses Correct Format)
 function updateFavicon() {
   const favicon = document.querySelector("link[rel='icon']") || document.createElement("link");

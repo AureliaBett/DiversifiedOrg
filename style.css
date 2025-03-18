@@ -1,4 +1,3 @@
-
 * { box-sizing: border-box;
   margin: 0;
   padding: 0;}
@@ -409,16 +408,24 @@ text-align: center;
   margin: auto;
   animation: 35s slide infinite linear;
   
+  
 }
+
 .logo-slides img{
   height:200px;
   margin: 0 50px;
+  
+}
+.logos:hover .logo-slides{
+  animation-play-state: paused;
+  transform: scale(1.25);
 }
 
 .logs:hover{
   transform: scale(1.25);
   cursor: pointer;
   background-color: #928e8e;
+  
 }
 @keyframes slide {
   from {
