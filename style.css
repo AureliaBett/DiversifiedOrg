@@ -183,13 +183,16 @@ h2{
     width: 100%;
     height: 100vh;
     background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    
 }
+
 .herosec {
-  padding: 50px 0 180px 100px;
+  padding: 15px ;
   text-align: left;
   background: rgba(250, 239, 239, 0.4); 
-  width: 70%;
-  border-radius: 30%;
+  margin-left: 100px;
+  border-radius: 10%;
+  z-index: 1 ;
   }
 .herosec h2 {
   font-family: 'Times New Roman', Times, serif;
@@ -313,7 +316,7 @@ h2{
   background-color: rgb(145, 143, 143); 
   color: blue;
 }
-.about-button{
+.about-buttonn{
   margin-left: 20%;
   margin-top: -50px;
   width:fit-content;
@@ -322,15 +325,16 @@ h2{
   text-decoration: none;
   color: #000;
   font-weight: bold;
-  border:solid rgb(145, 143, 143);
+  border:solid rgb(214, 10, 10);
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+ 
 }
 .about-button:hover{
   background-color: rgb(145, 143, 143); 
-  cursor: pointer;
+  color: blue;
 }
 
 .program{
@@ -513,13 +517,16 @@ text-align: center;
   align-items: center;
   background-color: #080808;
   justify-content: center;
+  height: 5vh;
 }
 .copyright p{
+  margin-top: 5px;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
+
 }
 
 
