@@ -65,6 +65,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  
+
   // Sidebar Menu
   document.querySelector('.sidebar-toggle')?.addEventListener('click', () => {
     document.querySelector('.sidebar').style.display = 'flex';
@@ -183,5 +185,12 @@ dropdowns.forEach(dropdown => {
 
   
 });
-
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display ='flex'
+}
+function hideSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.display ='none'
+}
 

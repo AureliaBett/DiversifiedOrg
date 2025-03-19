@@ -65,8 +65,8 @@ h2{
       color: rgb(19,22, 232);
       cursor: pointer;
       }
-      .nav-links li a.active{
-        color: #f0f0f0;
+      .nav-links li a .active{
+       
         color: rgb(19,22, 232);
         
         }
@@ -182,7 +182,8 @@ h2{
     left: 0;
     width: 100%;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    background: rgba(0, 0, 0, 0.3); 
+    z-index: 1;
     
 }
 
@@ -192,7 +193,7 @@ h2{
   background: rgba(250, 239, 239, 0.4); 
   margin-left: 100px;
   border-radius: 10%;
-  z-index: 1 ;
+  z-index: 2 ;
   }
 .herosec h2 {
   font-family: 'Times New Roman', Times, serif;
@@ -455,6 +456,8 @@ text-align: center;
   margin: 70px 0;
   margin-top: 10px ;
   margin-left: 30px;
+  overflow: hidden;
+  
 }
 .podcast-content h2, p {
   color: white;
@@ -652,16 +655,26 @@ background-color: #fff;
 
 
 
-@media (max-width: 899px) {
+@media (max-width: 800px) {
   .hideOnMobile{ 
-      display: none;
-      
+      display: none;    
   }
-
+.navbar{
+  width: 100%;
+  height: 10px;
+  
+}
+.thumbnail1{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; 
+  margin: auto;
+  }
   .nav-links{
-    margin-top: 70px;
-    
-    
+    margin-top: 0px;
+  }
+  .nav-links a {
+    color: yellow;
   }
 
 .donateHere-cards {
