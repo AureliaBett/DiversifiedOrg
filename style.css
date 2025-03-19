@@ -660,17 +660,7 @@ background-color: #fff;
       display: none;    
   }
 .navbar{
-  position: fixed;
-  background: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: auto;
-  transition:none;
-  width: 100%;
- 
-  z-index: 1000;
+  height: 7vh;
 
 }
 
