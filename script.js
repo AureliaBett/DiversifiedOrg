@@ -89,24 +89,41 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Navbar Scroll Effect with Thumbnail Resize
-  window.addEventListener("scroll", function () {
+  function updateThumbnailSize() {
+    const thumbnail = document.querySelector(".thumbnail1");
+    if (thumbnail) {
+        const isSmallScreen = window.innerWidth < 800;
+        thumbnail.style.width = isSmallScreen ? "50px" : "100px";
+        thumbnail.style.height = isSmallScreen ? "50px" : "100px";
+    }
+}
+
+window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
     const thumbnail = document.querySelector(".thumbnail1");
 
     if (navbar) {
-      navbar.classList.toggle("scrolled", window.scrollY > 50);
+        navbar.classList.toggle("scrolled", window.scrollY > 50);
     }
 
     if (thumbnail) {
-      if (window.scrollY > 50) {
-        thumbnail.style.width = "40px"; // Smaller size
-        thumbnail.style.height = "40px";
-      } else {
-        thumbnail.style.width = "80px"; // Original size
-        thumbnail.style.height = "80px";
-      }
+        const isSmallScreen = window.innerWidth < 800;
+
+        if (window.scrollY > 50) {
+            thumbnail.style.width = isSmallScreen ? "50px" : "40px";
+            thumbnail.style.height = isSmallScreen ? "50px" : "40px";
+        } else {
+            thumbnail.style.width = isSmallScreen ? "50px" : "100px";
+            thumbnail.style.height = isSmallScreen ? "50px" : "100px";
+        }
     }
-  });
+});
+
+// Ensure the correct size is applied on page load and window resize
+window.addEventListener("load", updateThumbnailSize);
+window.addEventListener("resize", updateThumbnailSize);
+
+
 
   // Sponsor Section - Clone Logo Slides for Infinite Scroll Effect
    const logoSlides = document.querySelector(".logo-slides");
