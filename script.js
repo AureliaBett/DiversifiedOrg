@@ -226,6 +226,28 @@ document.addEventListener("DOMContentLoaded", function () {
     sidebarClose.addEventListener('click', hideSidebar);
   }
 
+  // Dark Mode Toggle
+  const themeToggle = document.getElementById('theme-toggle');
+  const themeIcon = document.getElementById('theme-icon');
+  const savedTheme = localStorage.getItem('theme');
+
+  // Default to dark mode if no theme is saved
+  const currentTheme = savedTheme || 'dark-mode';
+  document.body.classList.add(currentTheme);
+  themeIcon.className = currentTheme === 'dark-mode' ? 'fas fa-moon' : 'fas fa-sun';
+
+  themeToggle.addEventListener('click', () => {
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    document.body.classList.toggle('dark-mode', !isDarkMode);
+    document.body.classList.toggle('light-mode', isDarkMode);
+
+    // Update icon
+    themeIcon.className = isDarkMode ? 'fas fa-moon' : 'fas fa-sun';
+
+    // Save the selected theme to localStorage
+    localStorage.setItem('theme', isDarkMode ? 'light-mode' : 'dark-mode');
+  });
+
 });
 
 function showSidebar() {
