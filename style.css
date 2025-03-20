@@ -658,9 +658,7 @@ background-color: #fff;
     text-align: center;
 
   }
-  .aboutUs-content h1,p{
-  font-size: 1.0rem;
-  }
+  
   
   .thumbnail1{
     width: 100px;
@@ -808,7 +806,7 @@ background-color: #fff;
 }
 .table-content p {
   
- font-size: o.8rem;
+ font-size: 0.8rem;
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
