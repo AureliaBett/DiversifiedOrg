@@ -686,9 +686,7 @@ background-color: #fff;
     color: rgb(250, 259, 239);
   }
 
-  .hero::before {
-    display: none;
-  }
+
 
 .donateHere-cards {
   display: flex;
