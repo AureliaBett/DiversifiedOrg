@@ -89,7 +89,7 @@ h2{
       transition: top 0.3s ease-in-out; 
       }
       .sidebar.open {
-        top: 0; 
+        top: 7vh; 
       }
       .sidebar li a {
         width: 100%;
