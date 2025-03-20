@@ -370,6 +370,7 @@ text-align: center;
   color: #000;
   text-align: left; 
   padding: 0 10px;
+  font-size: 1.0rem;
 }
 .cards img{
   width: 300px;
@@ -378,6 +379,7 @@ text-align: center;
 .cards h3{
   text-decoration: underline;
   color: #000;
+  font-size: 1.2rem;
 }
 
 .card-title{
@@ -535,6 +537,10 @@ background-color: #fff;
   align-items: center;
   text-align: justify;
 }
+.comm{ 
+  margin: 0 0 0 150px;
+  
+}
 .joy::before {
   content: "";
   position: absolute;
@@ -568,6 +574,10 @@ background-color: #fff;
  justify-content: center; 
  align-items: center;
 }
+.foot-logo{
+  height: 150px;
+  width: 150px;
+}
 .table-content {
  margin: auto;
   width: 50%;
@@ -580,6 +590,7 @@ background-color: #fff;
 }
 .table-content p{
   color: #000;
+  
 }
 .social-icon{
   font-size: 2rem; 
@@ -587,6 +598,10 @@ background-color: #fff;
   margin: 0 5px; 
   transition: color 0.3s ease; 
   display: inline-block;
+}
+.reach{
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 .copyright{
   align-items: center;
@@ -714,19 +729,28 @@ background-color: #fff;
 
 .cards{
   margin: -30px 0 10 0;
+  
 }
 .card1 .card2 .card3{
   margin-bottom: 10px;
 }   
-
+.cards h3{
+  font-size: 0.9rem;
+}
+.cards p{
+  font-size: 0.8rem;
+  text-align: justify;
+  word-spacing: -1px;
+}
 .podcast-content {
  width: 100%;
+ margin-top: 0;
  margin-bottom: 0;
 }
-.podcast-content, .joy-content h2{
+.podcast-content h2, .joy-content h2{
   font-size: 1.0rem;
 }
-.podcast-content, .joy-content p{
+.podcast-content p, .joy-content p{
   font-size: 0.8rem; 
   line-height: 1.8rem;
 }
@@ -743,20 +767,73 @@ background-color: #fff;
 }
 .joy{
   height: fit-content;
+ 
+  
 }
 .joy-content{
   width: 100%;
   padding: 50px;
 }
+#pod-button{
+  margin: 10px 0 0 0;
+  
+}
 .comm{
- margin-left:0px ;
- padding-left: 0;
- margin-top: 0;
+ margin-left:50px ;
+ 
+ margin-top: 10px;
 }
 
-.foot{
+#foot{
   height: fit-content;
 }
+
+.foot-logo{
+  height: 100px;
+  width: 100px;
+}
+.social-icon{
+  font-size: 1.0rem ;
+}
+.reach{
+  font-size: 1.0rem;
+}
+.table-content td{
+  padding: 0px;
+}
+
+.table-content {
+  width: 100%; 
+  border-collapse: collapse; 
+}
+.table-content p {
+  
+ font-size: o.8rem;
+ font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+
+
+ .table-content tr, .table-content td {
+  display: block; 
+  text-align: center; 
+  width: 100%; 
+  padding:5px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .donateHere-cards {
   display: flex;
   flex-wrap: wrap;
@@ -871,35 +948,6 @@ flex-wrap: wrap;
 }
 .contactUs-section {
     padding: 0px; /* Reduce padding for smaller screens */
-  }
-
-  .table-content {
-    width: 100%; /* Make table take full width */
-    border-collapse: collapse; /* Adjust table layout for smaller screens */
-   font-size: 1.0rem;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  .table-content p {
-    
-   font-size: 1.0rem;
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  .table-content th, .table-content td {
-  /* Stack table rows for smaller screens */
-    text-align: left; /* Align text to the left for better readability */
-    width: 100%; /* Make each cell take full width */
-    padding: 10px; /* Add padding for better spacing */
-  }
-
-  .table-content tr {
-    margin-bottom: 10px; /* Add spacing between rows */
-  }
-
-   .table-content tr, .table-content td {
-    display: block; /* Stack table rows for smaller screens */
-    text-align: left; /* Align text to the left for better readability */
-    width: 100%; /* Make each cell take full width */
-    padding: 10px; /* Add padding for better spacing */
   }
 
   .instagram-button {
