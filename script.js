@@ -165,6 +165,7 @@ dropdowns.forEach(dropdown => {
   });
 });
 
+
   // Dynamically load the navigation bar
   const navbarPlaceholder = document.getElementById('navbar-placeholder');
   if (navbarPlaceholder) {
