@@ -604,13 +604,15 @@ background-color: #fff;
   font-size: 1.5rem;
 }
 .copyright{
+  justify-content: center;
   align-items: center;
   background-color: #080808;
-  justify-content: center;
+  display: flex;
   height: 5vh;
+  
 }
 .copyright p{
-  margin-top: 5px;
+  margin-top: 20px;
   color: #fff;
   font-size: 1rem;
   font-weight: bold;
