@@ -190,21 +190,25 @@ dropdowns.forEach(dropdown => {
       .catch(error => console.error('Error loading footer:', error));
   }
 
+
+
+
   const copyPlaceholder = document.getElementById('copy-placeholder');
+
   if (copyPlaceholder) {
     fetch('copyright.html')
       .then(response => response.text())
       .then(data => {
-        copyPlaceholder.innerHTML = data;
-        
+        const currentYear = new Date().getFullYear();
+        copyPlaceholder.innerHTML = data.replace('{{year}}', currentYear);
       })
       .catch(error => console.error('Error loading copyright:', error));
   }
-
-
+   
   
-  
+
 });
+
 function showSidebar(){
   const sidebar = document.querySelector('.sidebar')
   sidebar.style.display ='flex'
@@ -213,4 +217,5 @@ function hideSidebar(){
   const sidebar = document.querySelector('.sidebar')
   sidebar.style.display ='none'
 }
+
 
