@@ -152,18 +152,31 @@ function scrollToAboutUs(event) {
 }
 
 // Handle dropdown menu hover functionality
-const dropdowns = document.querySelectorAll('.dropdown');
-dropdowns.forEach(dropdown => {
-  dropdown.addEventListener('mouseenter', () => {
-    const menu = dropdown.querySelector('.dropdown-menu');
-    if (menu) menu.style.display = 'block';
-  });
+document.addEventListener("DOMContentLoaded", function () {
+  const dropdowns = document.querySelectorAll(".dropdown, .dropdown1");
 
-  dropdown.addEventListener('mouseleave', () => {
-    const menu = dropdown.querySelector('.dropdown-menu');
-    if (menu) menu.style.display = 'none';
+  dropdowns.forEach(dropdown => {
+    dropdown.addEventListener("mouseenter", () => {
+      const menu = dropdown.querySelector(".dropdown-menu, .menu-side");
+      if (menu) {
+        menu.style.display = "block";
+        if (dropdown.classList.contains("dropdown1")) {
+          const rect = dropdown.getBoundingClientRect();
+          menu.style.position = "absolute";
+          menu.style.top = `${rect.top}px`;
+          menu.style.left = `${rect.right}px`;
+        }
+      }
+    });
+
+    dropdown.addEventListener("mouseleave", () => {
+      const menu = dropdown.querySelector(".dropdown-menu, .menu-side");
+      if (menu) menu.style.display = "none";
+    });
   });
 });
+
+
 
 
   // Dynamically load the navigation bar
@@ -190,9 +203,6 @@ dropdowns.forEach(dropdown => {
       .catch(error => console.error('Error loading footer:', error));
   }
 
-
-
-
   const copyPlaceholder = document.getElementById('copy-placeholder');
 
   if (copyPlaceholder) {
@@ -205,17 +215,31 @@ dropdowns.forEach(dropdown => {
       .catch(error => console.error('Error loading copyright:', error));
   }
    
-  
+  const sidebarToggle = document.querySelector('.sidebar-toggle');
+  const sidebarClose = document.querySelector('.sidebar-close');
+
+  if (sidebarToggle) {
+    sidebarToggle.addEventListener('click', showSidebar);
+  }
+
+  if (sidebarClose) {
+    sidebarClose.addEventListener('click', hideSidebar);
+  }
 
 });
 
-function showSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display ='flex'
+function showSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  if (sidebar) {
+    sidebar.classList.add('open'); // Add the 'open' class to slide in
+  }
 }
-function hideSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.display ='none'
+
+function hideSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  if (sidebar) {
+    sidebar.classList.remove('open'); // Remove the 'open' class to slide out
+  }
 }
 
 

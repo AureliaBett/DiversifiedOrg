@@ -72,28 +72,33 @@ h2{
         }
       .sidebar {
       position: fixed;
-      top: 50px;
-      right: 0;
+      top: -100%; /* Initially hidden off-screen at the top */
+      left: 0;
       height: 50vh;
       width: 100%;
       z-index: 999;
-      background: rgba(119, 17, 17, 0.6);
-      box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-      display: none;
+      background: rgba(119, 17, 17, 0.9);
+      box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: flext-start;
+      justify-content: flex-start;
       list-style: none;
-      gap: 10px;
+      gap: 20px;
+      padding: 20px;
+      transition: top 0.3s ease-in-out; 
+      }
+      .sidebar.open {
+        top: 0; 
       }
       .sidebar li a {
         width: 100%;
         font-weight: 600;
         text-decoration: none;
-        color: #000;
+        color: #fff;
       }
       .sidebar li a:hover {
-        color: rgb(19,22, 232);
+        color: rgb(19, 22, 232);
         cursor: pointer;
       }
       .sidebar li:hover {
@@ -135,13 +140,9 @@ h2{
 
   /* Add styles for the dropdown menu */
   .dropdown {
-    position: relative;
-    
+    position: relative;  
   }
-  .dropdown-menu .side {
-    padding: 200px;
-    
-  }
+  
   .dropdown-menu {
     display: none;
     position: absolute;
@@ -168,6 +169,39 @@ h2{
   .dropdown:hover .dropdown-menu {
     display: block;
   }
+
+  .dropdown1 {
+    position: relative;  
+  }
+  
+  .menu-side {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 30%;
+    background-color: rgba(202, 201, 201, 0.6);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 0px;
+    margin: 0;
+    width: 200px;
+    z-index: 1000;
+  }
+
+  .menu-side li {
+    padding: 10px 20px;
+  }
+
+  .menu-side li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .dropdown1:hover .menu-side {
+    display: block;
+  }
+
+
   .hero {
     display: flex; 
     flex-direction: column; 
