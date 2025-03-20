@@ -211,7 +211,7 @@ h2{
   
   .herosec p{
     font-family: 'Times New Roman', Times, serif;
-    font-size: 2.0rem;
+    font-size: 3.0rem;
     font-weight: bold;
     color: #000;
     }
@@ -689,6 +689,13 @@ background-color: #fff;
 .herosec{
   margin-left: 0px;
 }
+.herosec h2{
+  font-size: 2.5rem;
+  
+} 
+.herosec p{
+  font-size: 2.0rem;
+}
 
 .donateHere-cards {
   display: flex;
@@ -969,19 +976,7 @@ padding: 10px 0px 0px 0px;
       text-align: justify;
       font-size: 1.0rem;
         } 
-    .hero h2 {
-      font-size: 0.8rem;
-        }    
-    .hero h1  {
-      font-size: 1.5rem;
-    }    
-.herosec{
- padding: 50px;
-  display: flex;
-  justify-content: center;  /* Horizontally center the content */
-  align-items: flex-end; 
-  flex-direction: column;
-} 
+ 
 .collab-image{
   max-width: 100%;
 
