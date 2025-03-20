@@ -810,7 +810,9 @@ background-color: #fff;
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
+.copyright p{
+  font-size: 0.8rem;
+}
 
 
  .table-content tr, .table-content td {
