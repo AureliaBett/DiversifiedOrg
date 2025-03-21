@@ -247,6 +247,35 @@ document.addEventListener("DOMContentLoaded", function () {
     // Save the selected theme to localStorage
     localStorage.setItem('theme', isDarkMode ? 'light-mode' : 'dark-mode');
   });
+//social-media section
+const mediaSlides = document.querySelector(".media-slides");
+
+  if (mediaSlides) {
+    const clone = mediaSlides.cloneNode(true);
+    clone.classList.add("clone");
+    document.querySelector(".carousel-container").appendChild(clone);
+  }
+
+  // Add event listener to scroll down button in the hero section
+  const heroScrollButton = document.querySelector('.hero-scroll-button');
+  if (heroScrollButton) {
+    heroScrollButton.addEventListener('click', scrollToNextSection);
+  }
+
+  // Add event listener to scroll-to-top button
+  const scrollToTopButton = document.querySelector('.scroll-to-top-button');
+  if (scrollToTopButton) {
+    scrollToTopButton.addEventListener('click', scrollToTop);
+  }
+
+  // Show or hide the scroll-to-top button based on scroll position
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      scrollToTopButton?.classList.add('visible');
+    } else {
+      scrollToTopButton?.classList.remove('visible');
+    }
+  });
 
 });
 
@@ -262,6 +291,17 @@ function hideSidebar() {
   if (sidebar) {
     sidebar.classList.remove('open'); // Remove the 'open' class to slide out
   }
+}
+
+function scrollToNextSection() {
+  const nextSection = document.querySelector('.program'); // Select the next section
+  if (nextSection) {
+    nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Smooth scroll
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to the top
 }
 
 
