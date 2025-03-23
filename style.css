@@ -535,6 +535,7 @@ button.prev:hover, button.next:hover {
 }
 .podcast p{
   font-size: 1.2rem;
+  color:#fff
 }
 .pod-button{
   
@@ -557,7 +558,7 @@ button.prev:hover, button.next:hover {
 
 .podcast-image{
   border-radius: 15px;
-  height: 400px
+  height: 400px;
 }
 .podcast-image:hover{
   cursor: pointer;
@@ -675,7 +676,7 @@ background-color: #fff;
   font-size: 1.5rem;
 }
 
-.joy-content h2{
+.joy-content h2, .joy-content p{
   color: #fff;
 }
 
@@ -737,10 +738,147 @@ background-color: #fff;
 }
 
 
+/* Our history Section*/
+
+.about-hero{
+  position: relative;
+  background: url('history.jpg?v=1') no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3); 
+  z-index: 1;
+  
+}
+
+.about-hero p{
+color: #fff;
+font-size: 4rem;
+text-align: left;
+font-weight: bold;
+}
+
+.history {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 0;
+  gap: 20px;
+  width: 100%;
+  background: url('about.jpg?v=1') no-repeat center center/cover;
+  background-attachment: fixed;
+}
 
 
+.history-content{
+  position:relative;
+  text-align: center;
+  justify-content: center;
+  height: fit-content;
+  width: 50%;
+  margin: 100px 0 100px 0;
+  border-radius: 20px;
+  padding:15px 35px 10px 35px;
+  background: rgba(250, 239, 239, 0.7); 
+  overflow: hidden;
+}
+.history-content h2, .history-content p{
+  color: #000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.history-content h2 {
+ font-size: 1.5rem;
+ font-weight: bold;
+}
+.history-content p {
+  font-size: 1.2rem;
+  font-weight: 600;
+  
+  line-height: 3.0;
+  color: #000;
+ }
+.history-content::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  top: 0;
+  left: 0;
+  animation: animateBorder 3s linear infinite;
+}
 
+.history-content::after {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 0%;
+  background: linear-gradient(to bottom, red, orange, yellow, green, blue, indigo, violet);
+  top: 0;
+  right: 0;
+  animation: animateBorderRight 3s linear infinite 1.5s;
+}
+.history-content .border-bottom {
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(to left, red, orange, yellow, green, blue, indigo, violet);
+  bottom: 0;
+  right: 0;
+  animation: animateBorderBottom 3s linear infinite 3s;
+  content: "";
+}
 
+.collaboration{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+  background: #fff;
+ 
+}
+
+.collab-content{
+  width: 50%;
+  text-align: center;
+ margin-left: 30px;
+ padding: 0 10px ;
+ }
+.collab{
+  height: 400px;
+}
+.collab-content h2{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000;
+}
+.collab-content p{
+  font-size: 1.2rem;
+  text-align: justify;
+  line-height: 1.6;
+  color: #000;
+  margin-top: 15px;
+}
+.collab-events{
+  background-color: rgb(250, 259, 239);
+}
+.events{
+  display: flex;
+  flex-direction: column;
+}
 
 
 
@@ -760,7 +898,7 @@ background-color: #fff;
     margin-left: 100px;
 
   }
-  .aboutUs{
+  .aboutUs, .history{
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -769,7 +907,7 @@ background-color: #fff;
     height: auto;
    
   }
-  .aboutUs-content{
+  .aboutUs-content, .history-content{
     margin: 0;
     padding: 0 ;
     text-align: center;
@@ -844,16 +982,26 @@ background-color: #fff;
   text-align: justify;
   word-spacing: -1px;
 }
-.aboutUs-content{
+.aboutUs-content {
   width: 100%;
   margin: 0;
   padding: 0;
   text-align: center;
 }
-.aboutUs-content h2{
+.history{
+  height: 70vh;
+}
+ .history-content {
+  width: 100%;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  line-height: normal;
+}
+.aboutUs-content h2, .history-content h2{
   font-size: 1.0rem;
 }
-.aboutUs-content  p{
+.aboutUs-content p, .history-content p{
   font-size: 0.8rem;
 }
 
@@ -867,15 +1015,15 @@ background-color: #fff;
 }
 
 
-.podcast-content {
+.podcast-content, .collab-content {
  width: 100%;
  margin-top: 0;
  margin-bottom: 0;
 }
-.podcast-content h2, .joy-content h2{
+.podcast-content h2, .joy-content h2, .collab-content h2{
   font-size: 1.0rem;
 }
-.podcast-content p, .joy-content p{
+.podcast-content p, .joy-content p, .collab-content p{
   font-size: 0.8rem; 
   line-height: 1.8rem;
 }
@@ -949,8 +1097,16 @@ background-color: #fff;
   padding:5px; 
 }
 
-
-
+.collaboration{
+  display: flex;
+  flex-wrap: wrap;
+  height: fit-content;
+}
+.collab-content{
+  width: 100%;
+  margin-top: 0;
+  padding-left: 0;
+}
 
 
 
@@ -1347,6 +1503,7 @@ body.dark-mode .hero {
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 }
 
 .hero-scroll-button:hover {
@@ -1398,22 +1555,4 @@ body.dark-mode .hero {
 
 .scroll-to-top-button i {
   font-size: 1.5rem;
-}
-.about-hero{
-  position: relative;
-  background: url('udv.jpg?v=1') no-repeat center center/cover;
-  background-attachment: fixed;
-  height: 100vh;
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  text-align: justify;
-}
-
-
-.about-hero p{
-color: #000;
-font-size: 4rem;
-text-align: left;
-font-weight: bold;
 }

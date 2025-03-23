@@ -294,11 +294,12 @@ function hideSidebar() {
 }
 
 function scrollToNextSection() {
-  const nextSection = document.querySelector('.program'); // Select the next section
+  const nextSection = document.querySelector('.program, .history'); // Select the next section
   if (nextSection) {
     nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Smooth scroll
   }
 }
+
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to the top
