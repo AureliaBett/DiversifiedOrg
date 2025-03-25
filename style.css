@@ -875,7 +875,16 @@ font-weight: bold;
   margin-top: 15px;
 }
 .collab-events{
-  background-color: rgb(250, 259, 239);
+  background-color: rgb(250, 259, 260);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 10px;
+}
+.collab-events h2{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
 }
 .events{
   display: flex;
@@ -883,14 +892,27 @@ font-weight: bold;
 }
 
 .events p, .events h2, .events h3{
+  text-align: justify;
   color: #000;
 }
-.placards img{
+.events img{
   height: 200px;
+  
+}
+.majivuno{
+  width: 140px;
 }
 .placards{
   display: flex;
   align-items: center;
+  margin-left: 200px;
+  padding: 20px 0;
+  width: 70%;
+  
+}
+.placards:hover{
+  background-color: #928e8e;
+  
 }
 .placards p {
   flex:1;
@@ -898,15 +920,17 @@ font-weight: bold;
 .placards-text{
   display: flex;
   flex-direction: column;
+  padding: 10px;
 }
-.more-text{
+.more-text, .more-text1{
   display:none;
 }
-.read-more-btn {
-  margin-top: 10px;
-  background-color: #007bff;
-  color: white;
+.read-more-btn, .read-more-btn1 {
+  margin-top: 0px;
+  margin-left: 15px;
+  color: #000;
   border: none;
+  width: fit-content;
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 5px;
@@ -915,6 +939,11 @@ font-weight: bold;
 .read-more-btn:hover {
   background-color: #0056b3;
 }
+
+
+
+
+
 
   @media (min-width: 900px) {
     .hideOnDesktop{
@@ -1032,10 +1061,10 @@ font-weight: bold;
   text-align: center;
   line-height: normal;
 }
-.aboutUs-content h2, .history-content h2{
+.aboutUs-content h2, .history-content , .collab-events h2{
   font-size: 1.0rem;
 }
-.aboutUs-content p, .history-content p{
+.aboutUs-content p, .history-content p, .events h3{
   font-size: 0.8rem;
 }
 
@@ -1136,14 +1165,28 @@ font-weight: bold;
   display: flex;
   flex-wrap: wrap;
   height: fit-content;
+  padding-bottom: 20px;
 }
 .collab-content{
   width: 100%;
   margin-top: 0;
   padding-left: 0;
 }
+.collab-events{
+  padding-top: 0px;
+}
+.placards{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  padding: 10px 20px;
+  width: 100%;
+}
+.placards-text p{
+text-align: justify;
 
-
+font-size: 0.8rem;
+}
 
 
 

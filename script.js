@@ -306,23 +306,26 @@ function scrollToTop() {
   
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  function toggleText(event) {
+    const button = event.target;
+    const moreText = button.previousElementSibling;
+    
+    if (moreText.style.display === "none" || moreText.style.display === "") {
+      moreText.style.display = "block";
+      button.textContent = "Read Less";
+    } else {
+      moreText.style.display = "none";
+      button.textContent = "Read More";
+    }
+  }
+
+  // Attach event listeners to all read-more buttons
+  document.querySelectorAll(".read-more-btn, .read-more-btn1").forEach(button => {
+    button.addEventListener("click", toggleText);
+  });
+});
 
 
   
-    function toggleText() {
-      const moreText = document.querySelector(".more-text");
-      const button = document.querySelector(".read-more-btn");
-
-      if (moreText.style.display === "none" || moreText.style.display === "") {
-        moreText.style.display = "block";
-        button.textContent = "Read Less";
-      } else {
-        moreText.style.display = "none";
-        button.textContent = "Read More";
-      }
-    }
-
-    // Attach event listener dynamically (if needed)
-    document.querySelector(".read-more-btn").addEventListener("click", toggleText);
-
-
+    
