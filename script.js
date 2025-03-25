@@ -303,6 +303,26 @@ function scrollToNextSection() {
 
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' }); // Smooth scroll to the top
+  
 }
+
+
+
+  
+    function toggleText() {
+      const moreText = document.querySelector(".more-text");
+      const button = document.querySelector(".read-more-btn");
+
+      if (moreText.style.display === "none" || moreText.style.display === "") {
+        moreText.style.display = "block";
+        button.textContent = "Read Less";
+      } else {
+        moreText.style.display = "none";
+        button.textContent = "Read More";
+      }
+    }
+
+    // Attach event listener dynamically (if needed)
+    document.querySelector(".read-more-btn").addEventListener("click", toggleText);
 
 

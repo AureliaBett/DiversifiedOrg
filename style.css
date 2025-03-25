@@ -511,11 +511,11 @@ button.prev:hover, button.next:hover {
 }
 
 .podcast-content{
-  text-align: center;
+  text-align: justify;
   width: 50%;
-  margin: 70px 0;
+  padding: 0 10px;
   margin-top: 10px ;
-  margin-left: 30px;
+  margin-left: 50px;
   overflow: hidden;
   
 }
@@ -526,16 +526,18 @@ button.prev:hover, button.next:hover {
   line-height: 1.6;
 }
 
-#pod-button{
-  margin-top: 40px;
-}
 .podcast h2{
   text-decoration: underline;
   font-size: 1.5rem;
+  text-align: center;
+  margin-top: 10px;
 }
 .podcast p{
   font-size: 1.2rem;
   color:#fff
+}
+#pod-button{
+  text-align: center;
 }
 .pod-button{
   
@@ -880,7 +882,39 @@ font-weight: bold;
   flex-direction: column;
 }
 
-
+.events p, .events h2, .events h3{
+  color: #000;
+}
+.placards img{
+  height: 200px;
+}
+.placards{
+  display: flex;
+  align-items: center;
+}
+.placards p {
+  flex:1;
+}
+.placards-text{
+  display: flex;
+  flex-direction: column;
+}
+.more-text{
+  display:none;
+}
+.read-more-btn {
+  margin-top: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.read-more-btn:hover {
+  background-color: #0056b3;
+}
 
   @media (min-width: 900px) {
     .hideOnDesktop{
@@ -1032,6 +1066,7 @@ font-weight: bold;
   width: 100%;
   height: 50%;
 }
+
 .logos{
   padding: 30px 0;
 }
@@ -1425,9 +1460,13 @@ body.light-mode {
   background-color: #ffffff;
   color: #000000;
 }
-body.light-mode .nav-links li a {
+body.light-mode .nav-links li a, body.light-mode .sidebar li a {
   
   color: #000;
+}
+body.light-mode .nav-links li a:hover, body.light-mode .sidebar li a:hover {
+  
+  color: rgb(19,22, 232);
 }
 body.light-mode .navbar {
   background: rgba(255, 255, 255, 0.8);
@@ -1448,7 +1487,7 @@ body.dark-mode {
 }
 
 body.dark-mode .navbar {
-  background: rgba(0, 0, 0, 0.8);
+  background:  rgba(105, 104, 104, 0.4);
 }
 
 body.dark-mode .sidebar {
@@ -1490,7 +1529,7 @@ body.dark-mode .hero {
   position: absolute;
   bottom: 20px;
   left: 50%;
-  transform: translateX(-50%);
+  
   background: rgba(0, 0, 0, 0.6);
   color: #fff;
   border: none;
