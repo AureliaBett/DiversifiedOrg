@@ -875,7 +875,7 @@ font-weight: bold;
   margin-top: 15px;
 }
 .collab-events{
-  background-color: rgb(250, 259, 260);
+  background-color: #928e8e;;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -911,7 +911,7 @@ font-weight: bold;
   
 }
 .placards:hover{
-  background-color: #928e8e;
+  background-color: #3d3d3d;
   
 }
 .placards p {
@@ -936,12 +936,52 @@ font-weight: bold;
   border-radius: 5px;
   font-size: 14px;
 }
-.read-more-btn:hover {
+.read-more-btn:hover, .read-more-btn1:hover {
   background-color: #0056b3;
 }
+.achievements{
+  background-color: #f15c1c;
+  padding: 20px;
+}
 
+.key{
+  display: flex;
+  justify-content: center;
+}
+.key h2{
+font-size: 1.5rem;
+margin-top: 30px;
+}
+.key-image{
+  height: 100px;
+  border-radius: 15px;
+}
+.achievements li{
+  display:flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.achievements li:hover{
+background-color: #e45e05;
 
+}
+.achievements li p, .achievements li h3{
+  color: #000;
+}
+.achievements li img{
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+  border-radius: 10px;
+}
 
+.achievements ul{
+  width: 60%;
+margin: auto;
+list-style: none;
+padding: 0px;
+
+}
 
 
 
@@ -1069,7 +1109,7 @@ font-weight: bold;
 }
 
 .social-medias h2 {
-  font-size: 1.5rem;
+  font-size: 1.0rem;
   padding: 0px;
   margin-top: 0;
 }
@@ -1083,7 +1123,7 @@ font-weight: bold;
  margin-top: 0;
  margin-bottom: 0;
 }
-.podcast-content h2, .joy-content h2, .collab-content h2{
+.podcast-content h2, .joy-content h2, .collab-content h2, .achievements  h2{
   font-size: 1.0rem;
 }
 .podcast-content p, .joy-content p, .collab-content p{
@@ -1149,7 +1189,7 @@ font-weight: bold;
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.copyright p{
+.copyright p, .achievements li p, .achievements li h3{
   font-size: 0.8rem;
 }
 
@@ -1187,7 +1227,16 @@ text-align: justify;
 
 font-size: 0.8rem;
 }
+.achievements li{
+ 
+  align-items: flex-start;
+  margin-left: 0;
 
+}
+.achievements ul{
+padding: 15px;
+  width: 100%;
+}
 
 
 
@@ -1300,13 +1349,7 @@ flex-wrap: wrap;
   background: #2b2a2a;
   font-size: 1.0rem;
 }
-.achievements {
-  text-align: justify;
-  list-style: none; /* Remove default list styles */
-  padding: 10px 20px;
-  background: #2b2a2a;
-  font-size: 1.0rem;
-}
+
 .contactUs-section {
     padding: 0px; /* Reduce padding for smaller screens */
   }
