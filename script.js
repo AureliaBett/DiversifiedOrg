@@ -294,7 +294,7 @@ function hideSidebar() {
 }
 
 function scrollToNextSection() {
-  const nextSection = document.querySelector('.program, .history, .missionVision'); // Select the next section
+  const nextSection = document.querySelector('.program, .history, .missionVision, .contact-container'); // Select the next section
   if (nextSection) {
     nextSection.scrollIntoView({ behavior: 'smooth', block: 'start' }); // Smooth scroll
   }
