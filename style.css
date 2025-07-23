@@ -994,8 +994,27 @@ padding: 0px;
   align-items: center;
   text-align: justify;
 }
-
-.mission-hero::before {
+.sobriety-hero{
+  position: relative;
+  background: url('sob.png?v=1') no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+.program-hero{
+  position: relative;
+  background: url('our.png?v=1') no-repeat center center/cover;
+  background-attachment: fixed;
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+}
+.mission-hero::before,  .sobriety-hero::before, .program-hero::before {
   content: "";
   position: absolute;
   top: 0;
